@@ -6,7 +6,7 @@ import { fetchFromAPI } from '../utils/fetchFromAPI';
 import { useParams } from 'react-router-dom';
 //"gh"
 const SearchFeed = () => {
-  const [videos, setvideos] = useState([1])
+  const [videos, setvideos] = useState([])
   const {searchTerm} = useParams()
  useEffect(() => {
   fetchFromAPI(`search?part=snippet&q=${searchTerm}`)
